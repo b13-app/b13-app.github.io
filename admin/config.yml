@@ -2,6 +2,16 @@ backend:
   name: git-gateway
   branch: main
 
+media_folder: "apps"
+public_folder: "apps"
+
+# هذا الجزء هو الذي كان مفقوداً
+media_library:
+  name: cloud_inary # أو يمكنك تركه فارغاً إذا كنت ستستخدم المستودع فقط
+  config:
+    cloud_name: your_cloud_name
+    api_key: your_api_key
+
 collections:
   - name: "apps"
     label: "Apps"
@@ -9,3 +19,5 @@ collections:
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "APK File", name: "apk", widget: "file"}
