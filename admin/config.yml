@@ -2,16 +2,10 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "apps" # المجلد الذي تُرفع فيه الصور
-public_folder: "apps"
-
 collections:
   - name: "apps"
     label: "Apps"
-    folder: "content/apps" # مجلد جديد ستنشئه لتخزين بيانات التطبيقات
+    folder: "apps"
     create: true
-    slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Image", name: "image", widget: "image"}
-      - {label: "APK File", name: "apk", widget: "file"}
