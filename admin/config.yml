@@ -5,18 +5,12 @@ backend:
 media_folder: "apps"
 public_folder: "apps"
 
-# هذا الجزء هو الذي كان مفقوداً
-media_library:
-  name: cloud_inary # أو يمكنك تركه فارغاً إذا كنت ستستخدم المستودع فقط
-  config:
-    cloud_name: your_cloud_name
-    api_key: your_api_key
-
 collections:
   - name: "apps"
     label: "Apps"
     folder: "apps"
     create: true
+    slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
