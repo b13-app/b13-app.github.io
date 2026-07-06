@@ -17,7 +17,6 @@
                 <option value="ar">العربية</option>
                 <option value="en">English</option>
                 <option value="fr">Français</option>
-                <option value="es">Español</option>
             </select>
         </div>
     </header>
@@ -44,8 +43,7 @@
         const translations = {
             ar: { title: "أهلاً بك، أنا b13-app", appName: "SHOP LIST", download: "تحميل التطبيق (APK)", dir: "rtl" },
             en: { title: "Welcome, I am b13-app", appName: "SHOP LIST", download: "Download App (APK)", dir: "ltr" },
-            fr: { title: "Bienvenue, je suis b13-app", appName: "SHOP LIST", download: "Télécharger (APK)", dir: "ltr" },
-            es: { title: "Bienvenido, soy b13-app", appName: "SHOP LIST", download: "Descargar (APK)", dir: "ltr" }
+            fr: { title: "Bienvenue, je suis b13-app", appName: "SHOP LIST", download: "Télécharger (APK)", dir: "ltr" }
         };
 
         function changeLanguage(lang) {
@@ -57,14 +55,12 @@
             localStorage.setItem('lang', lang);
         }
 
-        // الكود الذكي للكشف التلقائي
         window.onload = () => {
             const savedLang = localStorage.getItem('lang');
             if (savedLang) {
                 document.getElementById('lang-selector').value = savedLang;
                 changeLanguage(savedLang);
             } else {
-                // كشف لغة المتصفح تلقائياً
                 const browserLang = navigator.language.split('-')[0];
                 if (translations[browserLang]) {
                     document.getElementById('lang-selector').value = browserLang;
