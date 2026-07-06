@@ -1,76 +1,77 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" id="html-tag">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    <title>b13-app | تطبيقات الأندرويد</title>
+    <title>b13-app | Android Apps</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-gray-950 text-gray-100 font-sans antialiased selection:bg-emerald-500 selection:text-white">
+<body class="bg-gray-950 text-gray-100 font-sans antialiased">
 
     <header class="sticky top-0 z-50 backdrop-blur-md bg-gray-950/70 border-b border-gray-800">
         <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent tracking-wider">b13-app</a>
-            <div class="flex items-center gap-4 text-sm text-gray-400">
-                <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> متاح للمشاريع</span>
-            </div>
+            <a href="#" class="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent">b13-app</a>
+            
+            <select id="lang-selector" onchange="changeLanguage(this.value)" class="bg-gray-900 border border-gray-700 text-emerald-400 text-sm rounded-lg px-3 py-1 cursor-pointer">
+                <option value="ar">العربية</option>
+                <option value="en">English</option>
+                <option value="fr">Français</option>
+                <option value="es">Español</option>
+            </select>
         </div>
     </header>
 
-    <main class="max-w-5xl mx-auto px-4 py-12 space-y-20">
-        
-        <section class="text-center space-y-6 max-w-2xl mx-auto pt-6">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-900 border border-gray-800 text-xs text-emerald-400">
-                <i class="fab fa-android text-sm"></i> مطور تطبيقات أندرويد
-            </div>
-            <h1 class="text-4xl md:text-5xl font-black tracking-tight leading-tight">
-                أهلاً بك، أنا <span class="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent">b13-app</span>
-            </h1>
+    <main class="max-w-5xl mx-auto px-4 py-12 space-y-12">
+        <section class="text-center space-y-4">
+            <h1 class="text-4xl font-black" id="hero-title">أهلاً بك، أنا b13-app</h1>
         </section>
 
-        <section class="space-y-8">
-            <div class="border-b border-gray-800 pb-4">
-                <h2 class="text-2xl font-bold">معرض التطبيقات</h2>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                <div class="group bg-gray-900/50 border border-gray-800 rounded-3xl overflow-hidden hover:border-emerald-500/50 transition-all duration-300 flex flex-col shadow-xl shadow-black/20">
-                    
-                    <div class="w-full h-56 sm:h-64 bg-gray-950/40 relative border-b border-gray-800 p-2">
-                        <img src="apps/shop-list.png" alt="SHOP LIST" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-102">
-                    </div>
-
-                    <div class="p-6 flex flex-col gap-4 flex-grow justify-between">
-                        <div class="text-center">
-                            <h3 class="text-2xl font-bold group-hover:text-emerald-400 transition-colors">SHOP LIST</h3>
-                        </div>
-
-                        <a href="apps/SHOP_LIST.apk" class="w-full text-center bg-emerald-500 hover:bg-emerald-600 text-gray-950 font-semibold text-base py-3.5 px-6 rounded-2xl transition-colors shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2">
-                            <i class="fab fa-android text-lg"></i> تحميل التطبيق (APK)
-                        </a>
-                    </div>
+        <section class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="group bg-gray-900/50 border border-gray-800 rounded-3xl overflow-hidden flex flex-col">
+                <div class="h-56 p-3 flex items-center justify-center border-b border-gray-800">
+                    <img src="apps/Untitled.jpg" alt="App" class="max-h-full object-contain">
                 </div>
-
-                <div class="border border-dashed border-gray-800 rounded-3xl p-8 flex flex-col items-center justify-center text-center space-y-3 min-h-[320px]">
-                    <div class="w-12 h-12 rounded-full bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-600">
-                        <i class="fas fa-plus text-sm"></i>
-                    </div>
-                    <p class="text-xs text-gray-600">تطبيق جديد قريباً</p>
+                <div class="p-6 flex flex-col gap-4">
+                    <h3 class="text-xl font-bold text-center" id="app-name">SHOP LIST</h3>
+                    <a href="apps/SHOP_LIST.apk" id="download-btn" class="bg-emerald-500 text-gray-950 py-3 rounded-2xl font-bold text-center">تحميل التطبيق</a>
                 </div>
-
             </div>
         </section>
-
     </main>
 
-    <footer class="border-t border-gray-900 bg-gray-950/40 py-8 text-center text-xs text-gray-600">
-        <p>© 2026 b13-app. جميع الحقوق محفوظة.</p>
-    </footer>
+    <script>
+        const translations = {
+            ar: { title: "أهلاً بك، أنا b13-app", appName: "SHOP LIST", download: "تحميل التطبيق (APK)", dir: "rtl" },
+            en: { title: "Welcome, I am b13-app", appName: "SHOP LIST", download: "Download App (APK)", dir: "ltr" },
+            fr: { title: "Bienvenue, je suis b13-app", appName: "SHOP LIST", download: "Télécharger (APK)", dir: "ltr" },
+            es: { title: "Bienvenido, soy b13-app", appName: "SHOP LIST", download: "Descargar (APK)", dir: "ltr" }
+        };
 
+        function changeLanguage(lang) {
+            document.getElementById('html-tag').dir = translations[lang].dir;
+            document.getElementById('html-tag').lang = lang;
+            document.getElementById('hero-title').innerText = translations[lang].title;
+            document.getElementById('app-name').innerText = translations[lang].appName;
+            document.getElementById('download-btn').innerText = translations[lang].download;
+            localStorage.setItem('lang', lang);
+        }
+
+        // الكود الذكي للكشف التلقائي
+        window.onload = () => {
+            const savedLang = localStorage.getItem('lang');
+            if (savedLang) {
+                document.getElementById('lang-selector').value = savedLang;
+                changeLanguage(savedLang);
+            } else {
+                // كشف لغة المتصفح تلقائياً
+                const browserLang = navigator.language.split('-')[0];
+                if (translations[browserLang]) {
+                    document.getElementById('lang-selector').value = browserLang;
+                    changeLanguage(browserLang);
+                }
+            }
+        };
+    </script>
 </body>
 </html>
