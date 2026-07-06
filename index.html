@@ -17,6 +17,11 @@
                 <option value="ar">العربية</option>
                 <option value="en">English</option>
                 <option value="fr">Français</option>
+                <option value="es">Español</option>
+                <option value="de">Deutsch</option>
+                <option value="ru">Русский</option>
+                <option value="zh">中文</option>
+                <option value="ja">日本語</option>
             </select>
         </div>
     </header>
@@ -43,7 +48,12 @@
         const translations = {
             ar: { title: "أهلاً بك، أنا b13-app", appName: "SHOP LIST", download: "تحميل التطبيق (APK)", dir: "rtl" },
             en: { title: "Welcome, I am b13-app", appName: "SHOP LIST", download: "Download App (APK)", dir: "ltr" },
-            fr: { title: "Bienvenue, je suis b13-app", appName: "SHOP LIST", download: "Télécharger (APK)", dir: "ltr" }
+            fr: { title: "Bienvenue, je suis b13-app", appName: "SHOP LIST", download: "Télécharger (APK)", dir: "ltr" },
+            es: { title: "Bienvenido, soy b13-app", appName: "SHOP LIST", download: "Descargar (APK)", dir: "ltr" },
+            de: { title: "Willkommen, ich bin b13-app", appName: "SHOP LIST", download: "App herunterladen (APK)", dir: "ltr" },
+            ru: { title: "Добро пожаловать, я b13-app", appName: "SHOP LIST", download: "Скачать (APK)", dir: "ltr" },
+            zh: { title: "欢迎，我是 b13-app", appName: "SHOP LIST", download: "下载应用 (APK)", dir: "ltr" },
+            ja: { title: "ようこそ、私はb13-appです", appName: "SHOP LIST", download: "アプリをダウンロード (APK)", dir: "ltr" }
         };
 
         function changeLanguage(lang) {
@@ -57,7 +67,7 @@
 
         window.onload = () => {
             const savedLang = localStorage.getItem('lang');
-            if (savedLang) {
+            if (savedLang && translations[savedLang]) {
                 document.getElementById('lang-selector').value = savedLang;
                 changeLanguage(savedLang);
             } else {
