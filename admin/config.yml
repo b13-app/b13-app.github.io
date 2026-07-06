@@ -4,8 +4,6 @@ backend:
 
 media_folder: "apps"
 public_folder: "apps"
-media_library:
-  name: uploadcare
 
 collections:
   - name: "apps"
