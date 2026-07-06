@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>b13-app | تطبيقات الأندرويد</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -36,6 +39,7 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 
+                <!-- كرت تطبيق SHOP LIST المربوط بالرابط المباشر للتحميل -->
                 <div class="group bg-gray-900/50 border border-gray-800 rounded-3xl p-8 hover:border-emerald-500/50 transition-all duration-300 flex flex-col items-center gap-6 shadow-xl shadow-black/20">
                     
                     <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center shadow-lg transition-transform group-hover:scale-105">
@@ -44,7 +48,8 @@
 
                     <h3 class="text-2xl font-bold group-hover:text-emerald-400 transition-colors">SHOP LIST</h3>
 
-                    <a href="#" class="w-full text-center bg-emerald-500 hover:bg-emerald-600 text-gray-950 font-semibold text-base py-3.5 px-6 rounded-2xl transition-colors shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2">
+                    <!-- تم ربط الزر بملف الـ APK داخل مجلد apps بنجاح -->
+                    <a href="apps/SHOP_LIST.apk" class="w-full text-center bg-emerald-500 hover:bg-emerald-600 text-gray-950 font-semibold text-base py-3.5 px-6 rounded-2xl transition-colors shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2">
                         <i class="fab fa-android text-lg"></i> تحميل التطبيق (APK)
                     </a>
                 </div>
