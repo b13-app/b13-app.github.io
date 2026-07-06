@@ -39,20 +39,28 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 
-                <div class="group bg-gray-900/50 border border-gray-800 rounded-3xl p-8 hover:border-emerald-500/50 transition-all duration-300 flex flex-col items-center gap-6 shadow-xl shadow-black/20">
+                <!-- كرت تطبيق SHOP LIST المطور بالكامل بالصورة الكاملة والزر المتناسق من تحت -->
+                <div class="group bg-gray-900/50 border border-gray-800 rounded-3xl overflow-hidden hover:border-emerald-500/50 transition-all duration-300 flex flex-col shadow-xl shadow-black/20">
                     
-                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-3xl overflow-hidden border border-gray-800 shadow-lg transition-transform group-hover:scale-105 group-hover:border-emerald-500/50">
-                        <img src="apps/%D8%AF%D9%81%D8%AA%D8%B1%20%D8%A7%D2%A4%D8%AF%D9%8A%D9%85%D9%86.png" alt="SHOP LIST" class="w-full h-full object-cover" onerror="this.src='apps/دفتر الديون.png'">
+                    <!-- مساحة الصورة كاملة تعمر المربع الفوقاني -->
+                    <div class="w-full h-52 sm:h-56 overflow-hidden bg-gray-950 relative border-b border-gray-800">
+                        <img src="apps/%D8%AF%D9%81%D8%AA%D8%B1%20%D8%A7%D2%A4%D8%AF%D9%8A%D9%85%D9%86.png" alt="SHOP LIST" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.src='apps/دفتر الديون.png'">
                     </div>
 
-                    <h3 class="text-2xl font-bold group-hover:text-emerald-400 transition-colors">SHOP LIST</h3>
+                    <!-- المحتوى السفلي للكرت (العنوان والزر من تحت) -->
+                    <div class="p-6 flex flex-col gap-4 flex-grow justify-between">
+                        <div class="text-center">
+                            <h3 class="text-2xl font-bold group-hover:text-emerald-400 transition-colors">SHOP LIST</h3>
+                        </div>
 
-                    <a href="apps/SHOP_LIST.apk" class="w-full text-center bg-emerald-500 hover:bg-emerald-600 text-gray-950 font-semibold text-base py-3.5 px-6 rounded-2xl transition-colors shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2">
-                        <i class="fab fa-android text-lg"></i> تحميل التطبيق (APK)
-                    </a>
+                        <a href="apps/SHOP_LIST.apk" class="w-full text-center bg-emerald-500 hover:bg-emerald-600 text-gray-950 font-semibold text-base py-3.5 px-6 rounded-2xl transition-colors shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2">
+                            <i class="fab fa-android text-lg"></i> تحميل التطبيق (APK)
+                        </a>
+                    </div>
                 </div>
 
-                <div class="border border-dashed border-gray-800 rounded-3xl p-8 flex flex-col items-center justify-center text-center space-y-3 min-h-[300px]">
+                <!-- خانة التطبيق القادم -->
+                <div class="border border-dashed border-gray-800 rounded-3xl p-8 flex flex-col items-center justify-center text-center space-y-3 min-h-[320px]">
                     <div class="w-12 h-12 rounded-full bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-600">
                         <i class="fas fa-plus text-sm"></i>
                     </div>
