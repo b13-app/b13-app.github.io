@@ -13,16 +13,25 @@
             margin: 0;
             padding: 50px;
         }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
         .card {
             background-color: #161b22;
             border: 1px solid #30363d;
             border-radius: 10px;
             padding: 20px;
-            max-width: 400px;
-            margin: 0 auto;
+            max-width: 300px;
+            width: 100%;
         }
         img {
             width: 100%;
+            height: 180px;
+            object-fit: contain;
             border-radius: 10px;
             margin-bottom: 20px;
         }
@@ -30,7 +39,7 @@
             display: inline-block;
             background-color: #238636;
             color: white;
-            padding: 15px 25px;
+            padding: 12px 20px;
             text-decoration: none;
             border-radius: 6px;
             font-weight: bold;
@@ -46,10 +55,20 @@
     <h1>b13-app</h1>
     <h2>أهلاً بك، أنا b13-app</h2>
 
-    <div class="card">
-        <img src="apps/shop-list.png" alt="SHOP LIST App">
-        <h3>SHOP LIST</h3>
-        <a href="apps/shop-list.apk" class="btn">تحميل التطبيق (APK)</a>
+    <div class="container">
+        <!-- تطبيق SHOP LIST -->
+        <div class="card">
+            <img src="apps/shop-list.png" alt="SHOP LIST App">
+            <h3>SHOP LIST</h3>
+            <a href="apps/shop-list.apk" class="btn">تحميل التطبيق (APK)</a>
+        </div>
+
+        <!-- تطبيق Notepad الجديد -->
+        <div class="card">
+            <img src="apps/shop-list.png" alt="Notepad App">
+            <h3>Notepad</h3>
+            <a href="apps/Notepad.apk" class="btn">تحميل التطبيق (APK)</a>
+        </div>
     </div>
 
 </body>
