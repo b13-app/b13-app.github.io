@@ -1,89 +1,56 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" id="html-tag">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>b13-app | Android Apps</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body class="bg-gray-950 text-gray-100 font-sans antialiased">
-
-    <header class="sticky top-0 z-50 backdrop-blur-md bg-gray-950/70 border-b border-gray-800">
-        <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent">b13-app</a>
-            
-            <select id="lang-selector" onchange="changeLanguage(this.value)" class="bg-gray-900 border border-gray-700 text-emerald-400 text-sm rounded-lg px-3 py-1 cursor-pointer">
-                <option value="ar">العربية</option>
-                <option value="en">English</option>
-                <option value="fr">Français</option>
-                <option value="es">Español</option>
-                <option value="de">Deutsch</option>
-                <option value="ru">Русский</option>
-                <option value="zh">中文</option>
-                <option value="ja">日本語</option>
-                <option value="tr">Türkçe</option>
-                <option value="fa">فارسی</option>
-                <option value="hi">हिन्दी</option>
-            </select>
-        </div>
-    </header>
-
-    <main class="max-w-5xl mx-auto px-4 py-12 space-y-12">
-        <section class="text-center space-y-4">
-            <h1 class="text-4xl font-black" id="hero-title">أهلاً بك، أنا b13-app</h1>
-        </section>
-
-        <section class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="group bg-gray-900/50 border border-gray-800 rounded-3xl overflow-hidden flex flex-col">
-                <div class="h-56 p-3 flex items-center justify-center border-b border-gray-800">
-                    <img src="apps/shop-list.png" alt="App" class="max-h-full object-contain">
-                </div>
-                <div class="p-6 flex flex-col gap-4">
-                    <h3 class="text-xl font-bold text-center" id="app-name">SHOP LIST</h3>
-                    <a href="apps/SHOP_LIST.apk" id="download-btn" class="bg-emerald-500 text-gray-950 py-3 rounded-2xl font-bold text-center">تحميل التطبيق</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <script>
-        const translations = {
-            ar: { title: "أهلاً بك، أنا b13-app", appName: "SHOP LIST", download: "تحميل التطبيق (APK)", dir: "rtl" },
-            en: { title: "Welcome, I am b13-app", appName: "SHOP LIST", download: "Download App (APK)", dir: "ltr" },
-            fr: { title: "Bienvenue, je suis b13-app", appName: "SHOP LIST", download: "Télécharger (APK)", dir: "ltr" },
-            es: { title: "Bienvenido, soy b13-app", appName: "SHOP LIST", download: "Descargar (APK)", dir: "ltr" },
-            de: { title: "Willkommen, ich bin b13-app", appName: "SHOP LIST", download: "App herunterladen (APK)", dir: "ltr" },
-            ru: { title: "Добро пожаловать, я b13-app", appName: "SHOP LIST", download: "Скачать (APK)", dir: "ltr" },
-            zh: { title: "欢迎，我是 b13-app", appName: "SHOP LIST", download: "下载应用 (APK)", dir: "ltr" },
-            ja: { title: "ようこそ、私はb13-appです", appName: "SHOP LIST", download: "アプリをダウンロード (APK)", dir: "ltr" },
-            tr: { title: "Hoş geldiniz, ben b13-app", appName: "SHOP LIST", download: "Uygulamayı İndir (APK)", dir: "ltr" },
-            fa: { title: "خوش آمدید، من b13-app هستم", appName: "SHOP LIST", download: "دانلود برنامه (APK)", dir: "rtl" },
-            hi: { title: "आपका स्वागत है, मैं b13-app हूँ", appName: "SHOP LIST", download: "ऐप डाउनलोड करें (APK)", dir: "ltr" }
-        };
-
-        function changeLanguage(lang) {
-            document.getElementById('html-tag').dir = translations[lang].dir;
-            document.getElementById('html-tag').lang = lang;
-            document.getElementById('hero-title').innerText = translations[lang].title;
-            document.getElementById('app-name').innerText = translations[lang].appName;
-            document.getElementById('download-btn').innerText = translations[lang].download;
-            localStorage.setItem('lang', lang);
+    <style>
+        body {
+            background-color: #0d1117;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 50px;
         }
+        .card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #238636;
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background-color: #2ea043;
+        }
+    </style>
+</head>
+<body>
 
-        window.onload = () => {
-            const savedLang = localStorage.getItem('lang');
-            if (savedLang && translations[savedLang]) {
-                document.getElementById('lang-selector').value = savedLang;
-                changeLanguage(savedLang);
-            } else {
-                const browserLang = navigator.language.split('-')[0];
-                if (translations[browserLang]) {
-                    document.getElementById('lang-selector').value = browserLang;
-                    changeLanguage(browserLang);
-                }
-            }
-        };
-    </script>
+    <h1>b13-app</h1>
+    <h2>أهلاً بك، أنا b13-app</h2>
+
+    <div class="card">
+        <img src="apps/shop-list.png" alt="SHOP LIST App">
+        <h3>SHOP LIST</h3>
+        <a href="apps/shop-list.apk" class="btn">تحميل التطبيق (APK)</a>
+    </div>
+
 </body>
 </html>
