@@ -9,23 +9,22 @@
         body { background-color: #0d1117; color: white; font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 20px; }
         h1 { color: #58a6ff; }
         
-        /* جعل الحاويات تحت بعضها */
+        /* تعديلات التنسيق الأفقي */
         .container { 
             display: flex; 
-            flex-direction: column; /* الترتيب عمودي */
-            align-items: center; /* توسيط العناصر */
-            gap: 30px; 
+            flex-direction: row;      /* الترتيب أفقي */
+            justify-content: center;  /* توسيط البطاقات */
+            flex-wrap: wrap;          /* النزول لسطر جديد عند صغر الشاشة */
+            gap: 20px;                /* مسافة بين البطاقات */
             margin-top: 20px; 
         }
         
-        /* البطاقة تأخذ عرض الشاشة مع هامش بسيط */
         .card { 
             background-color: #161b22; 
             border: 1px solid #30363d; 
             border-radius: 10px; 
             padding: 20px; 
-            width: 90%; /* تأخذ 90% من عرض الشاشة */
-            max-width: 500px; /* لا تتجاوز 500 بكسل حتى لا تصبح ضخمة جداً */
+            width: 300px;             /* عرض ثابت للبطاقة */
             transition: transform 0.3s ease-in-out; 
         }
         
@@ -34,7 +33,7 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.5); 
         }
 
-        img { width: 100%; height: 250px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; }
+        img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; }
         .btn { display: inline-block; background-color: #238636; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; cursor: pointer; border: none; font-size: 18px; margin-top: 10px; }
         .btn:hover { background-color: #2ea043; }
     </style>
